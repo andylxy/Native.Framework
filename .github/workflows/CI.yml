@@ -1,7 +1,13 @@
 name: Publish to GitHub Pages
 
 on: 
-  [gollum,push]
+  gollum:
+    branches:
+      - master
+  push:
+    branches:
+      - deploy
+      - Final
 jobs:
   publish:
     runs-on: ubuntu-latest
@@ -51,6 +57,7 @@ jobs:
           mmv '07*.md' 'Upgrade.md'
           mmv '08*.md' 'Debug.md'
           mmv '09*.md' 'Issues.md'
+          mmv '10*.md' 'IniConfig.md'
       - name: Deploy
         if: success()
         uses: crazy-max/ghaction-github-pages@v1

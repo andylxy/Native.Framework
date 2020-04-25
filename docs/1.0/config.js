@@ -32,6 +32,9 @@ let config = {
                 },
                 {
                     title: '增加悬浮窗', path: '/Flow'
+                },
+                {
+                    title: 'IniConfig的使用', path: '/IniConfig'
                 }
             ]
         },
